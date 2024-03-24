@@ -6,3 +6,18 @@ Filme filme2 = new Filme("Creed 2", 130, new List<string>() {"Michal B. Jordan",
 Filme filme3 = new Filme("Creed 3", 116, new List<string>() { "Michal B. Jordan", "Tessa Thompson", "Jonathan Majors", "Canelo Álvarez"});
 Filme filme4 = new Filme("Homem-Aranha: Sem Volta para Casa", 148, new List<string>() {"Andrew Garfield", "Tobey Maguire", "Tom Holland", "Zendaya", "Jacob Batalon"});
 Filme filme5 = new Filme("À Procura da Felicidade", 157, new List<string>() { "Will Smith", "Jaden Smith", "Chris Gardner"});
+
+List<Filme> filmesFavoritos = new List<Filme>();
+filmesFavoritos.Add(filme1);
+filmesFavoritos.Add(filme2);
+filmesFavoritos.Add(filme3);
+filmesFavoritos.Add(filme4);
+filmesFavoritos.Add(filme5);
+
+foreach (var filme in filmesFavoritos)
+{
+    Console.WriteLine($"Titulo: {filme.Titulo}");
+    Console.WriteLine($"Duração: {filme.Duracao}");
+    filme.ListarElenco();
+    Console.WriteLine();
+}
