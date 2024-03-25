@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Channels;
 using System.Threading.Tasks;
 
-namespace Atividade1.Filmes
+namespace Alura.Filmes
 {
     internal class Artista
     {
@@ -21,9 +21,10 @@ namespace Atividade1.Filmes
             FilmesAtuados = new List<Filme>();
         }
 
-        public void AdicionarFilme (string filme)
+        public void AdicionarFilme (Filme filme)
         {
             FilmesAtuados.Add(filme);
+            if (!filme.Elenco.Contains(this)) filme.AdicionarElenco(this);
         }
 
         public void MostrarFilmesAtuados()
