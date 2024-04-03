@@ -1,21 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Atividade2.Classes.Oficina
 {
-    internal class Cliente
+    internal class Mecanico
     {
-        public string Nome { get; set; }
-        public string Contato { get; set; }
 
-        public Cliente(string nome, string contato) 
+        public string Nome { get; set; }
+        public string Especialidade { get; set;}
+
+        public Mecanico(string nome, string especialidade)
         {
             Nome = nome;
-            Contato = contato;
-
+            Especialidade = especialidade;
         }
     }
+
+    
+
+    
 }
