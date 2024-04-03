@@ -17,6 +17,7 @@ namespace Atividade2.Classes.Oficina
         {
             Nome = nome;
             Especialidade = especialidade;
+            
         }
     }
 

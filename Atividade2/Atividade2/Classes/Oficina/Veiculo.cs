@@ -13,6 +13,11 @@ namespace Atividade2.Classes.Oficina
         public int Ano {  get; set; }
         public string Placa { get; set; }
 
+        public Veiculo()
+        {
+            
+        }
+
         public Veiculo(string marca, string modelo, int ano, string placa)
         {
             Marca = marca;
