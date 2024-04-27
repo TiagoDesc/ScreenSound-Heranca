@@ -53,11 +53,14 @@ internal class Program
                     RegistrarAlbum();
                     break;
                 case 3:
-                    MostrarBandasRegistradas();
+                    MenuBandasRegistradas menu3 = new();
+                    menu3.Executar(bandasRegistradas);
+                    ExibirOpcoesDoMenu();
                     break;
                 case 4:
                     MenuAvaliarBanda menu4 = new();
                     menu4.Executar(bandasRegistradas);
+                    ExibirOpcoesDoMenu();
                     break;
                 case 5:
                     MenuExibirDetalhes menu5 = new MenuExibirDetalhes();
