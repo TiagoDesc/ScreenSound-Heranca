@@ -55,7 +55,7 @@ internal class Program
             if (opcoes.ContainsKey(opcaoEscolhidaNumerica))
             {
                 Menu menu = opcoes[opcaoEscolhidaNumerica];
-                
+                menu.Executar(bandasRegistradas);   
             }
             else
             {
