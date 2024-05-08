@@ -2,6 +2,7 @@
 
 abstract class Shape
 {
-    public abstract double AreaCalculator();
+    
     public abstract double PerimeterCalculator();
+    public abstract double AreaCalculator();
 }
