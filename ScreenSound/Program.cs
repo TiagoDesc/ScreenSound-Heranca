@@ -51,7 +51,7 @@ internal class Program
             Console.Write("\nDigite a sua opção: ");
             string opcaoEscolhida = Console.ReadLine()!;
             int opcaoEscolhidaNumerica = int.Parse(opcaoEscolhida);
-
+ 
             if (opcoes.ContainsKey(opcaoEscolhidaNumerica))
             {
                 Menu menu = opcoes[opcaoEscolhidaNumerica];
