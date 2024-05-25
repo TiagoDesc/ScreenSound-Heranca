@@ -7,7 +7,7 @@ internal class MenuAvaliarAlbum : Menu
     public override void Executar(Dictionary<string, Banda> bandasRegistradas)
     {
         base.Executar(bandasRegistradas);
-        ExibirTituloDaOpcao("Avaliar banda");
+        ExibirTituloDaOpcao("Avaliar Álbum");
         Console.Write("Digite o nome da banda que deseja avaliar: ");
         string nomeDaBanda = Console.ReadLine()!;
         if (bandasRegistradas.ContainsKey(nomeDaBanda))
