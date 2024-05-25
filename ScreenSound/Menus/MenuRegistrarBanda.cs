@@ -14,16 +14,16 @@ namespace ScreenSound.Menus
             Banda banda = new Banda(nomeDaBanda);
             bandasRegistradas.Add(nomeDaBanda, banda);
 
-            string apiKey = Environment.GetEnvironmentVariable("OPENAI_API_KEY");
-            var client = new OpenAIAPI(apiKey);
+            //string apiKey = Environment.GetEnvironmentVariable("OPENAI_API_KEY");
+            //var client = new OpenAIAPI(apiKey);
 
-            var chat = client.Chat.CreateConversation();
+            //var chat = client.Chat.CreateConversation();
 
-            chat.AppendSystemMessage($"Resuma a banda {nomeDaBanda} em uma linguagem formal e bem descritiva.");
-
-            string resposta = chat.GetResponseFromChatbotAsync().GetAwaiter().GetResult();
-            banda.Resumo = resposta;
-            Console.WriteLine(resposta);
+            //chat.AppendSystemMessage($"Resuma a banda {nomeDaBanda} em uma linguagem formal e bem descritiva.");
+            
+            //string resposta = chat.GetResponseFromChatbotAsync().GetAwaiter().GetResult();
+            //banda.Resumo = resposta;
+            //Console.WriteLine(resposta);
 
             Console.WriteLine($"A banda {nomeDaBanda} foi registrada com sucesso!");
             Console.WriteLine("Digite uma tecla para voltar ao menu principal");
