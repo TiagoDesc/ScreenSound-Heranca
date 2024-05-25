@@ -1,7 +1,17 @@
 ﻿using ScreenSound.Menus;
 using ScreenSound.Modelos;
+using OpenAI_API;
+using Microsoft.Extensions.Primitives;
 
-internal class Program
+var client = new OpenAIAPI("REMOVED_SECRET");
+
+var chat = client.Chat.CreateConversation();
+
+chat.AppendSystemMessage("Resuma a banda Ira! Em uma linguagem informal.");
+
+string resposta = await chat.GetResponseFromChatbotAsync();
+Console.WriteLine(resposta);
+internal partial class Program
 {
     private static void Main(string[] args)
     {
@@ -67,7 +77,7 @@ internal class Program
 
         }
 
-        ExibirOpcoesDoMenu();
+        //ExibirOpcoesDoMenu();
 
     }
 }
