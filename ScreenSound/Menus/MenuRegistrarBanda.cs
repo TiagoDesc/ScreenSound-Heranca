@@ -14,21 +14,20 @@ internal class MenuRegistrarBanda : Menu
         Banda banda = new Banda(nomeDaBanda);
         bandasRegistradas.Add(nomeDaBanda, banda);
 
-        /*var client = new OpenAIAPI("REMOVED_SECRET");
+        string apiKey = Environment.GetEnvironmentVariable("OPENAI_API_KEY");
+        var client = new OpenAIAPI(apiKey);
 
         var chat = client.Chat.CreateConversation();
 
         chat.AppendSystemMessage($"Resuma a banda {nomeDaBanda} em uma linguagem formal e bem descritiva.");
 
-        string resposta = chat.GetResponseFromChatbotAsync().GetAwaiter().GetResult();
+        string resposta = await chat.GetResponseFromChatbotAsync();
         banda.Resumo = resposta;
         Console.WriteLine(resposta);
-        */ //Reativar para a utilização.
 
         Console.WriteLine($"A banda {nomeDaBanda} foi registrada com sucesso!");
         Console.WriteLine("Digite uma tecla para voltar ao menu principal");
         Console.ReadKey();
         Console.Clear();
-
     }
 }
