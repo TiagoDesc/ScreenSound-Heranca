@@ -14,7 +14,7 @@ internal class MenuRegistrarBanda : Menu
         Banda banda = new Banda(nomeDaBanda);
         bandasRegistradas.Add(nomeDaBanda, banda);
 
-        var client = new OpenAIAPI("REMOVED_SECRET");
+        /*var client = new OpenAIAPI("REMOVED_SECRET");
 
         var chat = client.Chat.CreateConversation();
 
@@ -23,6 +23,7 @@ internal class MenuRegistrarBanda : Menu
         string resposta = chat.GetResponseFromChatbotAsync().GetAwaiter().GetResult();
         banda.Resumo = resposta;
         Console.WriteLine(resposta);
+        */ //Reativar para a utilização.
 
         Console.WriteLine($"A banda {nomeDaBanda} foi registrada com sucesso!");
         Console.WriteLine("Digite uma tecla para voltar ao menu principal");
