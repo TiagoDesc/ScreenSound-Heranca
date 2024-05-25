@@ -1,5 +1,4 @@
 ﻿using ScreenSound.Modelos;
-using OpenAI_API;
 
 namespace ScreenSound.Menus;
 
